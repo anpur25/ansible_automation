@@ -1,7 +1,7 @@
 #!/root/ansible/myansible/bin/ansible-playbook
 - name: Installing WebServer
-  hosts: all
-  remote_user: admin
+  hosts: dev demo
+  user: admin
   become: 'yes'
   
   tasks:
