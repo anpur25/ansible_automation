@@ -2,7 +2,7 @@
 - name: Installing WebServer
   hosts: dev demo
   user: admin
-  become: 'yes'
+  become: yes
   
   tasks:
     - name: Ensure Apache is at the Latest Version
