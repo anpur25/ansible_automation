@@ -1,5 +1,5 @@
 ---
-- hosts: dev
+- hosts: dev demo
   user: admin
   become: yes
   connection: ssh
