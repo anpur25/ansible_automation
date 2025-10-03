@@ -1,0 +1,14 @@
+--- # Condition playbook
+- hosts: dev demo
+  user: admin
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: install apache on debian
+      command: apt-get -y install apache
+      when: ansible_os_family=='Debian'
+
+    - name: install apache on redhat
+      command: dnf -y install httpd
+      when: ansible_os_family=="RedHat"

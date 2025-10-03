@@ -1,0 +1,9 @@
+--- # Task and target playbook
+- hosts: demo dev
+  user: admin
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: Install HTTPD on linux
+      action: yum name=httpd state=removed

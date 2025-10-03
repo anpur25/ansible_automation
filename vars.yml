@@ -1,0 +1,12 @@
+--- # Creating and using vars
+- hosts: demo dev
+  user: admin
+  become: yes
+  connection: ssh
+
+  vars:
+    pkgname: httpd
+    
+  tasks:
+    - name: install package
+      action: yum name='{{pkgname}}' state=installed
